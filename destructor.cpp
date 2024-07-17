@@ -34,4 +34,7 @@ int main()
 {
     Customer A1;
     return 0;
+
+    Customer *A2 = new Customer;
+    delete A2;
 }
