@@ -1,0 +1,35 @@
+# Ignore all binaries and object files
+*.o
+*.exe
+*.out
+
+# Ignore Visual Studio Code settings directory
+.vscode/
+
+# Ignore temporary files created by code runners or editors
+tempCodeRunnerFile.cpp
+
+# Add your binaries if they follow a specific pattern
+destructor
+oops2
+
+# Optionally, ignore other common binary files or IDE-specific files
+*.dll
+*.pdb
+*.class
+*.jar
+
+# Ignore compiled files from different languages
+*.pyc
+*.class
+*.swiftmodule
+*.swiftdoc
+*.dSYM
+
+# Ignore any other files you don't want to push
+*.log
+*.tmp
+
+# Ensure your source code files are included
+!*.cpp
+!*.h

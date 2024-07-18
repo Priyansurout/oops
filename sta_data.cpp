@@ -6,10 +6,11 @@ class Customer
 {
 
     string name;
+    static int total_customer;
+    static int total_balance;
     int account_number, balance;
 
 public:
-    static int total_customer;
     Customer()
     {
         cout << "Hi!! Welcome to our voult!" << endl;
@@ -23,6 +24,12 @@ public:
         this->account_number = account_number;
         this->balance = balance;
         total_customer++;
+        total_balance += balance;
+    }
+
+    static void acceStatic()
+    {
+        cout << "Total customer: " << total_customer << endl;
     }
 
     void dispaly()
@@ -34,9 +41,16 @@ public:
 
         cout << "Total customer: " << total_customer << endl;
     }
+
+    static void display_total_balance()
+    {
+
+        cout << "display_total_balance " << total_balance << endl;
+    }
 };
 
 int Customer::total_customer = 0;
+int Customer::total_balance = 0;
 
 int main()
 {
@@ -52,8 +66,9 @@ int main()
     Customer A5("Nova rout", 1138, 5000);
     A5.dispaly();
 
-    Customer::total_customer = 10;
-
+    // Customer::total_customer = 10;
+    Customer::acceStatic();
+    Customer::display_total_balance();
     A1.display_total();
     return 0;
 }
